@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="jscolor.css" type="text/css" />
+    <script src="jscolor.js"></script>
+</head>
+
+<body>
+    <div class="cores">
+        <h3>Cor do lápis</h3>
+        <input type="color" id="seletorDeCores">
+        <button id="botaoBorracha">Borracha</button>
+        <button id="botaoPreencher">Preencher</button>
+        <button id="botaoPreencherFundo">Preencher Fundo</button>
+        <button id="botaoDesfazer">Desfazer</button>
+    </div>
+
+    <main>
+        <canvas id="canvas" width="900" height="600"></canvas>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
