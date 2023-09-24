@@ -1,34 +1,75 @@
-*{
+* {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
 }
 
-canvas {
-    border: 2px solid black;
+@font-face {
+    font-family: 'Orbitron';
+    src: url(fonts/Orbitron-Regular.ttf);
 }
 
-main{
+@font-face {
+    font-family: 'IBM';
+    src: url(fonts/IBMPlexMono-Regular.ttf);
+}
+
+body{
+    background-color: #4B96F1;
+}
+
+canvas {
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 8px;
+    background-color: white;
+}
+
+main {
     text-align: center;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 }
 
-input{
+input {
     width: 50px;
     height: 40px;
     background: rgb(195, 195, 195);
 }
 
-.cores{
-    display: flex;
-    margin-top: 50px;
-    align-items: center;
-}
 
-h3{
+h3 {
     margin-left: 40px;
     margin-right: 20px;
+    font: 500 18px 'IBM', sans-serif;
+}
+
+
+button {
+    font: 500 16px 'IBM', sans-serif;
+}
+
+.tudo{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+}
+
+.esquerdo, .botoes{
+    flex-direction: column;
+    display: flex;
+}
+
+button{
+    margin: 10px;
+}
+
+.esquerdo{
+    margin-right: 100px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.384);
+    border-radius: 8px;
 }

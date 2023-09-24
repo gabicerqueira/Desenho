@@ -6,6 +6,12 @@ let modoBorracha = false;
 let formas = [];
 let acoes = []; // Armazena ações de desenho para desfazer
 
+let tamanhoSlider = document.getElementById("tamanhoDoTraco");
+
+tamanhoSlider.addEventListener("input", function () {
+    contexto.lineWidth = this.value;
+});
+
 canvas.addEventListener("mousedown", function (event) {
     //vamos usar o método addEventListener para ouvir nosso mouse, ele irá identificar quando clicamos
     desenhando = true;
@@ -47,14 +53,18 @@ document.getElementById("seletorDeCores").addEventListener("input", function () 
 });
 
 document.getElementById("botaoBorracha").addEventListener("click", function () {
-    modoBorracha = !modoBorracha;
+
     if (modoBorracha) {
-        contexto.lineWidth = 10;
-        this.style.backgroundColor = "#828282";
+        tamanhoSlider.value = 1;//tamanho do lápis
+        contexto.lineWidth = tamanhoSlider.value; //base no valor do slider
+        this.style.backgroundColor = ""; // Limpa o estilo de fundo
     } else {
-        contexto.lineWidth = 1;
-        this.style.backgroundColor = "";
+        tamanhoSlider.value = 10; //tamanho da borracha
+        contexto.lineWidth = tamanhoSlider.value; //base no valor do slider
+        this.style.backgroundColor = "#828282"; // Define o estilo de fundo para indicar que a borracha está ativada
     }
+
+    modoBorracha = !modoBorracha; // Alternar entre lápis e borracha
 });
 
 document.getElementById("botaoPreencher").addEventListener("click", function () {
@@ -79,4 +89,8 @@ document.getElementById("botaoDesfazer").addEventListener("click", function () {
             contexto.putImageData(acoes[acoes.length - 1], 0, 0); // Restaura a ação anterior
         }
     }
+});
+
+document.getElementById("botaoLimpar").addEventListener("click", function () {
+    contexto.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
 });
