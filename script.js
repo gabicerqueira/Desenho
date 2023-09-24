@@ -69,21 +69,18 @@ document.getElementById("seletorDeCores").addEventListener("input", function () 
 });
 
 document.getElementById("botaoBorracha").addEventListener("click", function () {
-    formaSelecionada = "borracha"; // Defina a forma selecionada como borracha
-
-    if (modoBorracha) {
-        tamanhoSlider.value = 1; // tamanho do lápis
-        contexto.lineWidth = tamanhoSlider.value; // base no valor do slider
-        this.classList.remove("selecionado");
+    if (formaSelecionada === "borracha") {
+        this.classList.add("selecionado");
     } else {
-        tamanhoSlider.value = 10; // tamanho da borracha
-        contexto.lineWidth = tamanhoSlider.value; // base no valor do slider
+        formaSelecionada = "borracha"; // Ativar o modo de borracha
+        tamanhoSlider.value = 10;
+        contexto.lineWidth = tamanhoSlider.value;
         this.classList.add("selecionado");
         document.getElementById("botaoLapis").classList.remove("selecionado");
     }
-
-    modoBorracha = !modoBorracha; // Alternar entre lápis e borracha
+    modoBorracha = true; // Sempre ative o modo de borracha ao clicar no botão "Borracha"
 });
+
 
 
 document.getElementById("botaoPreencher").addEventListener("click", function () {
