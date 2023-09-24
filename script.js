@@ -58,10 +58,12 @@ document.getElementById("botaoBorracha").addEventListener("click", function () {
         tamanhoSlider.value = 1;//tamanho do lápis
         contexto.lineWidth = tamanhoSlider.value; //base no valor do slider
         this.style.backgroundColor = ""; // Limpa o estilo de fundo
+        this.style.color = '#000'
     } else {
         tamanhoSlider.value = 10; //tamanho da borracha
         contexto.lineWidth = tamanhoSlider.value; //base no valor do slider
         this.style.backgroundColor = "#828282"; // Define o estilo de fundo para indicar que a borracha está ativada
+        this.style.color = '#fff'
     }
 
     modoBorracha = !modoBorracha; // Alternar entre lápis e borracha
