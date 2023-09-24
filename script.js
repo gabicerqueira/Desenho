@@ -7,7 +7,6 @@ let formas = [];
 let acoes = []; // Armazena ações de desenho para desfazer
 
 let tamanhoSlider = document.getElementById("tamanhoDoTraco");
-tamanhoSlider.max = 35;
 
 tamanhoSlider.addEventListener("input", function () {
     contexto.lineWidth = this.value;
