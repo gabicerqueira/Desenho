@@ -10,6 +10,7 @@ document.getElementById("botaoLapis").classList.add("selecionado");
 
 document.getElementById("botaoLapis").addEventListener("click", function () {
     formaSelecionada = "lapis";
+    document.querySelector(".fa-pencil").classList.add("azul")
 
     tamanhoSlider.value = 1;//tamanho do lápis
     contexto.lineWidth = tamanhoSlider.value; //base no valor do slider
@@ -17,6 +18,8 @@ document.getElementById("botaoLapis").addEventListener("click", function () {
 
     document.getElementById("botaoBorracha").classList.remove("selecionado");
     this.classList.add("selecionado"); // Adicione a classe "selecionado" quando o lápis for selecionado
+
+    document.querySelector(".fa-eraser").classList.remove("azul");
 
 });
 
@@ -69,6 +72,7 @@ document.getElementById("seletorDeCores").addEventListener("input", function () 
 });
 
 document.getElementById("botaoBorracha").addEventListener("click", function () {
+    document.querySelector(".fa-eraser").classList.add("azul")
     if (formaSelecionada === "borracha") {
         this.classList.add("selecionado");
     } else {
@@ -77,6 +81,7 @@ document.getElementById("botaoBorracha").addEventListener("click", function () {
         contexto.lineWidth = tamanhoSlider.value;
         this.classList.add("selecionado");
         document.getElementById("botaoLapis").classList.remove("selecionado");
+        document.querySelector(".fa-pencil").classList.remove("azul");
     }
     modoBorracha = true; // Sempre ative o modo de borracha ao clicar no botão "Borracha"
 });

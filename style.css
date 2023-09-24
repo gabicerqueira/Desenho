@@ -20,6 +20,11 @@
     src: url(fonts/Inter-Regular.ttf);
 }
 
+@font-face {
+    font-family: 'Open';
+    src: url(fonts/OpenSans-Regular.ttf);
+}
+
 body{
     background-color: #4B96F1;
 }
@@ -51,10 +56,13 @@ h3 {
 
 
 button {
-    font: 500 16px 'IBM', sans-serif;
+    font: 500 16px 'Open', sans-serif;
     margin: 10px;
-    padding: 5px;
     background-color: #ffffff00;
+}
+
+.opcoes{
+    font: 500 17px 'Open', sans-serif;
 }
 
 .tudo{
@@ -65,7 +73,7 @@ button {
     margin-top: 90px;
 }
 
-.esquerdo, .botoes{
+.esquerdo, .botoes, .botoes2, .principais{
     flex-direction: column;
     display: flex;
 }
@@ -75,6 +83,7 @@ button {
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 8px;
+    padding: 12px;
 }
 .fa-eraser, .fa-pencil{
     padding-right: 6px;
@@ -82,4 +91,21 @@ button {
 
 .botao-forma.selecionado {
     color: #4B96F1;
+}
+
+.azul{
+    color: #4B96F1;
+}
+
+.principais{
+    align-items: flex-start;
+}
+
+i{
+    font-size: 17px;
+}
+
+#tamanhoDoTraco {
+    width: 100%;
+    height: 30px;
 }

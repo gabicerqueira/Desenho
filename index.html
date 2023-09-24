@@ -15,17 +15,20 @@
 
     <div class="tudo">
         <div class="esquerdo">
-            <div class="cores">
-                <div class="lapis">
-                    <div id="controleTamanho">
-                        <input type="range" id="tamanhoDoTraco" min="1" max="35" value="1">
-                    </div>
-                    <input type="color" id="seletorDeCores">
-                </div>
-            </div>
             <div class="botoes">
-                <button id="botaoLapis" class="botao-forma"><i class="fa-solid fa-pencil" style="color: #000000;"></i>Lápis</button>
-                <button id="botaoBorracha" class="botao-forma"><i class="fa-solid fa-eraser" style="color: #000000;"></i>Borracha</button>
+                <div class="principais">
+                    <p class="opcoes">Opções</p>
+                    <button id="botaoLapis" class="botao-forma"><i class="fa-solid fa-pencil"></i>Lápis</button>
+                    <button id="botaoBorracha" class="botao-forma"><i class="fa-solid fa-eraser"></i>Borracha</button>
+                </div>
+                <div class="cores">
+                    <div class="lapis">
+                        <div id="controleTamanho">
+                            <input type="range" id="tamanhoDoTraco" min="1" max="70" value="1">
+                        </div>
+                        <input type="color" id="seletorDeCores">
+                    </div>
+                </div>
                 <button id="botaoPreencher">Preencher</button>
                 <button id="botaoPreencherFundo">Preencher Fundo</button>
                 <button id="botaoDesfazer"><i class="fa-solid fa-arrow-rotate-left"
