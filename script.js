@@ -139,3 +139,4 @@ function salvarCanvasComoImagem() {
     link.download = 'desenho.png';
     link.click();
 }
+

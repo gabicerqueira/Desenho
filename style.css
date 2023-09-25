@@ -43,8 +43,10 @@ main {
 }
 
 input {
-    width: 50px;
-    height: 40px;
+    width: 70px;
+    height: 30px;
+    padding: 4px;
+    background-color: #f0f0f0af;
 }
 
 
@@ -58,11 +60,12 @@ h3 {
 button {
     font: 500 16px 'Open', sans-serif;
     margin: 10px;
-    background-color: #ffffff00;
+    background-color: #fff4f400;
 }
 
 .opcoes{
     font: 500 17px 'Open', sans-serif;
+    text-align: left;
 }
 
 .tudo{
@@ -79,13 +82,13 @@ button {
 }
 
 .esquerdo{
-    margin-right: 100px;
+    margin-right: 60px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 8px;
-    padding: 12px;
+    padding: 12px 20px;
 }
-.fa-eraser, .fa-pencil{
+.fa-eraser, .fa-pencil, .fa-fill-drip, .fa-fill{
     padding-right: 6px;
 }
 
@@ -108,4 +111,26 @@ i{
 #tamanhoDoTraco {
     width: 100%;
     height: 30px;
+}
+
+.cores{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#seletorDeCores{
+    margin-left: 20px;
+}
+
+.final{
+    display: flex;
+    flex-direction: column;
+    margin-top: 25px;
+}
+
+.preencher-divs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
