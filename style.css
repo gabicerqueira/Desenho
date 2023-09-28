@@ -25,7 +25,7 @@
     src: url(fonts/OpenSans-Regular.ttf);
 }
 
-body{
+body {
     background-color: #4B96F1;
 }
 
@@ -63,12 +63,12 @@ button {
     background-color: #fff4f400;
 }
 
-.opcoes{
+.opcoes {
     font: 500 17px 'Open', sans-serif;
     text-align: left;
 }
 
-.tudo{
+.tudo {
     display: flex;
     text-align: center;
     align-items: center;
@@ -76,19 +76,26 @@ button {
     margin-top: 90px;
 }
 
-.esquerdo, .botoes, .botoes2, .principais{
+.esquerdo,
+.botoes,
+.botoes2,
+.principais {
     flex-direction: column;
     display: flex;
 }
 
-.esquerdo{
+.esquerdo {
     margin-right: 60px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.384);
     border-radius: 8px;
-    padding: 12px 20px;
+    padding: 28px 20px;
 }
-.fa-eraser, .fa-pencil, .fa-fill-drip, .fa-fill{
+
+.fa-eraser,
+.fa-pencil,
+.fa-fill-drip,
+.fa-fill {
     padding-right: 6px;
 }
 
@@ -96,15 +103,15 @@ button {
     color: #4B96F1;
 }
 
-.azul{
+.azul {
     color: #4B96F1;
 }
 
-.principais{
+.principais {
     align-items: flex-start;
 }
 
-i{
+i {
     font-size: 17px;
 }
 
@@ -113,24 +120,113 @@ i{
     height: 30px;
 }
 
-.cores{
+.cores {
     margin-top: 20px;
     display: flex;
     align-items: center;
 }
 
-#seletorDeCores{
+#seletorDeCores {
     margin-left: 20px;
 }
 
-.final{
+.final {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
 }
 
-.preencher-divs{
+.preencher-divs {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
+
+/* .acao{
+    padding-right: 8px;
+} */
+
+#botaoDesfazer {
+    background-color: #4B96F1;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.voltar {
+    font: 500 16px 'Open', sans-serif;
+    padding-right: 8px;
+    color: white;
+}
+
+
+#botaoDesfazer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 110px;
+    height: 40px;
+    border: none;
+    padding: 0px 20px;
+    background-color: #4B96F1;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 0px rgb(68, 113, 168);
+    transition-duration: .3s;
+    margin-bottom: 30px;
+}
+
+.fa-arrow-rotate-left {
+    width: 13px;
+    position: absolute;
+    right: 0;
+    margin-right: 20px;
+    fill: white;
+    transition-duration: .3s;
+}
+
+#botaoDesfazer:hover {
+    color: transparent;
+}
+
+#botaoDesfazer:hover i {
+    right: 43%;
+    margin: 0;
+    padding: 0;
+    border: none;
+    transition-duration: .3s;
+    color: white;
+}
+
+#botaoDesfazer:active {
+    transform: translate(3px, 3px);
+    transition-duration: .3s;
+    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+}
+
+.botaoDiferente {
+    justify-content: center;
+    display: flex;
+}
+
+#botaoLimpar {
+    border: 2px solid rgb(179, 179, 179);
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#salvarDesenho {
+    background-color: #4B96F1;
+    padding: 10px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+}
+
