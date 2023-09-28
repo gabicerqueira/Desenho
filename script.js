@@ -102,16 +102,32 @@ document.getElementById("botaoPreencherFundo").addEventListener("click", functio
     contexto.fillRect(0, 0, canvas.width, canvas.height);
 });
 
+// Inicializei arrays para armazenar ações desfeitas e ações refeitas
+var acoesDesfeitas = [];
+var acoesRefeitas = [];
+
 document.getElementById("botaoDesfazer").addEventListener("click", function () {
     if (acoes.length > 0) {
-        acoes.pop(); // Remove a última ação
+        var acaoDesfeita = acoes.pop(); // Remove a última ação
+        acoesDesfeitas.push(acaoDesfeita); // Adiciona a ação desfeita à pilha de ações desfeitas
+
         contexto.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
         if (acoes.length > 0) {
             contexto.putImageData(acoes[acoes.length - 1], 0, 0); // Restaura a ação anterior
         }
     }
-    formas.pop(); // Remove a última forma desenhada
 });
+
+document.getElementById("botaoRefazer").addEventListener("click", function () {
+    if (acoesDesfeitas.length > 0) {
+        var acaoRefazer = acoesDesfeitas.pop(); // Remove a última ação desfeita
+        acoes.push(acaoRefazer); // Adicione a ação de volta à pilha de ações
+
+        contexto.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
+        contexto.putImageData(acaoRefazer, 0, 0); // Restaura a ação desfeita
+    }
+});
+
 
 document.getElementById("botaoLimpar").addEventListener("click", function () {
     contexto.clearRect(0, 0, canvas.width, canvas.height); // Limpa o canvas
