@@ -79,7 +79,8 @@ button {
 .esquerdo,
 .botoes,
 .botoes2,
-.principais {
+.principais,
+.lapis-borracha{
     flex-direction: column;
     display: flex;
 }
@@ -107,7 +108,7 @@ button {
     color: #4B96F1;
 }
 
-.principais {
+.principais, .lapis-borracha {
     align-items: flex-start;
 }
 
@@ -193,6 +194,7 @@ i {
 
 #botaoDesfazer:hover {
     color: transparent;
+    background-color: #346aac;
 }
 
 #botaoDesfazer:hover i {
@@ -222,6 +224,16 @@ i {
     cursor: pointer;
 }
 
+#botaoLimpar:hover{
+    background-color: rgb(196, 196, 196);
+    transition: 0.2s;
+}
+
+#salvarDesenho:hover{
+    background-color: #31619b;
+    transition: 0.2s;
+}
+
 #salvarDesenho {
     background-color: #4B96F1;
     padding: 10px;
@@ -230,3 +242,42 @@ i {
     cursor: pointer;
 }
 
+.ultimos{
+    flex-direction: column;
+    display: flex;
+}
+
+@media screen and (max-width: 768px){
+    .tudo{
+        flex-direction: column-reverse;
+    }
+
+    canvas{
+        width: 400px;
+        height: 340px;
+    }
+
+    .esquerdo {
+        margin-right: 0;
+        padding: 28px 20px;
+        margin: 90px 0;
+    }
+
+    .lapis-borracha{
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .preencher-divs {
+        flex-direction: row;
+        margin-top: 10px;
+    }
+
+    .cores {
+        justify-content: center;
+    }
+
+    .ultimos{
+        flex-direction: row;
+    }
+}

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="jscolor.css" type="text/css" />
     <script src="jscolor.js"></script>
     <script src="https://kit.fontawesome.com/65d3d9eac0.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="logo.png">
 </head>
 
 <body>
@@ -18,8 +19,11 @@
             <div class="botoes">
                 <div class="principais">
                     <p class="opcoes">Opções</p>
-                    <button id="botaoLapis" class="botao-forma"><i class="fa-solid fa-pencil"></i>Lápis</button>
-                    <button id="botaoBorracha" class="botao-forma"><i class="fa-solid fa-eraser"></i>Borracha</button>
+                    <div class="lapis-borracha">
+                        <button id="botaoLapis" class="botao-forma"><i class="fa-solid fa-pencil"></i>Lápis</button>
+                        <button id="botaoBorracha" class="botao-forma"><i
+                                class="fa-solid fa-eraser"></i>Borracha</button>
+                    </div>
                 </div>
 
                 <div class="input">
@@ -40,10 +44,13 @@
 
                 <div class="final">
                     <div class="botaoDiferente">
-                    <button id="botaoDesfazer">Voltar<i class="fa-solid fa-arrow-rotate-left"></i>
-                      </button></div>                  
-                    <button id="botaoLimpar">Limpar tudo</button>
-                    <button id="salvarDesenho">Salvar Desenho</button>
+                        <button id="botaoDesfazer">Voltar<i class="fa-solid fa-arrow-rotate-left"></i>
+                        </button>
+                    </div>
+                    <div class="ultimos">
+                        <button id="botaoLimpar">Limpar tudo</button>
+                        <button id="salvarDesenho">Salvar Desenho</button>
+                    </div>
                 </div>
             </div>
         </div>
