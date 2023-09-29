@@ -208,7 +208,7 @@ i {
 #botaoDesfazer:active {
     transform: translate(3px, 3px);
     transition-duration: .3s;
-    box-shadow: 2px 2px 0px rgb(32, 41, 212);
+    box-shadow: 2px 2px 0px rgb(57, 86, 144);
 }
 
 #botaoRefazer {
@@ -255,7 +255,7 @@ i {
 #botaoRefazer:active {
     transform: translate(3px, 3px);
     transition-duration: .3s;
-    box-shadow: 2px 2px 0px rgb(32, 41, 212);
+    box-shadow: 2px 2px 0px rgb(57, 86, 144);
 }
 
 .botaoDiferente {
@@ -299,7 +299,7 @@ i {
     }
 
     canvas{
-        width: 400px;
+        width: 70%;
         height: 340px;
     }
 
